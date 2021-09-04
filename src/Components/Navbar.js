@@ -12,7 +12,7 @@ export default class Navbar extends Component {
                 <NavLink 
                     className="navbar-link"
                     activeClassName="navbar-link-active"
-                    to="/"    
+                    to="/home"    
                 >
                     <FaHome 
                         size="1.5em"

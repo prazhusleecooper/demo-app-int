@@ -29,7 +29,7 @@ export default class RouterWrapper extends Component {
 
                         <Route 
                             exact
-                            path="/"
+                            path="/home"
                         >
                             <Home />
                         </Route>
