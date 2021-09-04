@@ -3,7 +3,8 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    Link,
+    Redirect
 } from "react-router-dom";
 
 import Navbar from '../Components/Navbar';
@@ -27,6 +28,13 @@ export default class RouterWrapper extends Component {
 
                     <Switch>
 
+                        <Route 
+                            exact
+                            path="/"
+                        >
+                            <Redirect to="/home" />
+                        </Route>
+                        
                         <Route 
                             exact
                             path="/home"
