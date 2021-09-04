@@ -1,0 +1,40 @@
+.card-container {
+    width: 100%;
+    min-height: 5em;
+    box-shadow: 0px 0px 24px -3px #00000059;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    margin: 6px 0;
+    border-radius: 4px;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card-image {
+    width: 3.25em;
+    height: 3.25em;
+    border-radius: 6px;
+}
+
+.card-text-section {
+    margin: 0 0 0 1em;
+}
+
+.result-text {
+    color: #000000;
+    font-size: 14px;
+}
+
+.result-link {
+    color: #A6A4A4;
+    font-size: 12px;
+}
