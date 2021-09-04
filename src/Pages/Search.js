@@ -19,6 +19,7 @@ class Search extends React.Component {
             searchResults: [],
         };
     }
+    
 
 
         // | Non-Rendering Methods
