@@ -24,6 +24,7 @@ class Search extends React.Component {
 
         // | Non-Rendering Methods
 
+        // ? Handle Text box input change
         handleInputChange = (event) => {
 
             this.setState({
@@ -33,7 +34,10 @@ class Search extends React.Component {
             this.triggerSearch();
 
         }
+        //  | End of handleInputChange()
 
+
+        // ? Check if a card is saved/set as favourite
         checkSaved = (savedCards, result) => {
 
             var existingCards = savedCards.filter((card) => card.FirstURL === result.FirstURL);
@@ -49,7 +53,10 @@ class Search extends React.Component {
             }
 
         }
+        // | End of checkSaved()
 
+
+        // ? Method to save/set a card as favourite 
         saveCard = (result) => {
 
             console.log("CARD SAVE INIT");
@@ -83,6 +90,7 @@ class Search extends React.Component {
             }
 
         } 
+        // | End of saveCard()
         // * End of Non-Rendering Methods
 
 
@@ -108,6 +116,7 @@ class Search extends React.Component {
         }
         // * End of initalSearchScreen method
 
+        // ? Method to initialize search API call
         triggerSearch = () => {
 
             if(this.state.searchQuery.length >= 3) {
@@ -140,7 +149,10 @@ class Search extends React.Component {
             }
 
         };
+        // | End of triggerSearch()
 
+
+        // ? Method to render the search results
         renderSearchResults = () => {
 
             if(this.state.searchResults.length === 0) {
@@ -192,14 +204,10 @@ class Search extends React.Component {
             }
 
         };
+        //  | End of renderSearchResults()
 
-        renderResultsScreen = () => {
 
-            return this.triggerSearch();
-
-        }
-
-        // | Method to render the Search screens conditionally 
+        // ? Method to render the Search screens conditionally 
         renderSearchScreen = () => {
 
             if(this.state.searchQuery === "" || this.state.searchQuery.length < 3) {

@@ -16,6 +16,7 @@ class Favourites extends React.Component {
         };
     }
 
+        // ? Save card prop method 
         saveCard = (result) => {
             // do nothing
         }
@@ -23,6 +24,7 @@ class Favourites extends React.Component {
         
         // ? Rendering Methods
 
+        // ? Method to render the favourite cards
         renderFavouriteCards = () => {
 
             if(this.state.savedCards === null || this.state.savedCards.length === 0) {
@@ -66,10 +68,12 @@ class Favourites extends React.Component {
             }
 
         }
+        // * End of renderFavouriteCards()
 
         // * End of Rendering Methods
 
 
+        // ? ComponentDidMount method
         componentDidMount = () => {
 
             var savedCards = JSON.parse(localStorage.getItem("savedCards"));

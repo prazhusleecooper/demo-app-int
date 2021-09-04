@@ -21,6 +21,7 @@ export default class Card extends Component {
 		
     }
 
+	// ? Method to change the color of the star
 	saveCard = () => {
 		
 		this.setState({
@@ -29,7 +30,10 @@ export default class Card extends Component {
 
 		this.props.saveCard(this.props.resultObject);
 	};
+	// * End of saveCard()
+	
 
+	// ? Method to check if card is saved
 	checkSaved = (savedCards, result) => {
 
 		var existingCards = savedCards.filter((card) => card.FirstURL === result.FirstURL);
@@ -45,7 +49,10 @@ export default class Card extends Component {
 		}
 
 	};
+	// * End of checkSaved()
 
+
+	// ? ComponentDidMount Method
 	componentDidMount = () => {
 
 		var savedCards = JSON.parse(localStorage.getItem("savedCards"));
